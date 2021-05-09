@@ -104,7 +104,7 @@ ceph pg {pg-id} mark_unfound_lost revert|delete
 
 9. PG scrubbing
 ------------------------------------------------------------------------------------------------------------------
-ceph pg dump | grep -i incons | cut -f1 -d" " | while read i; do ceph pg repair ${i} ; done
+	$ ceph pg dump | grep -i incons | cut -f1 -d" " | while read i; do ceph pg repair ${i} ; done
 
 
 
