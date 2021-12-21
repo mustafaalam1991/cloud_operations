@@ -86,7 +86,7 @@ https://access.redhat.com/documentation/en-us/red_hat_ceph_storage/2/html/troubl
 7. ceph admin sockets (asok) have very fine grained information of OSD state:
 ------------------------------------------------------------------------------------------------------------------
 	$ ceph --admin-daemon /var/lib/ceph/osd/ceph-osd.0.asok config show |grep <param_of_interest>
-	ex: ceph --admin-daemon /var/lib/ceph/osd/ceph-osd.0.asok config show |grep osd_max_backfills
+	ex: ceph --admin-daemon /var/lib/ceph/osd/ceph-0/ceph-osd.0.asok config show |grep osd_max_backfills
 
 
 Refer to this link for documentation on admin sockets:
@@ -106,7 +106,9 @@ ceph pg {pg-id} mark_unfound_lost revert|delete
 ------------------------------------------------------------------------------------------------------------------
 	$ ceph pg dump | grep -i incons | cut -f1 -d" " | while read i; do ceph pg repair ${i} ; done
 
-
+10. List high disk utilization OSD
+------------------------------------------------------------------------------------------------------------------
+	$ ceph osd df plain | sort -rn -k 7
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Ceph Monitoring: 
