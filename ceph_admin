@@ -85,8 +85,8 @@ https://access.redhat.com/documentation/en-us/red_hat_ceph_storage/2/html/troubl
 
 7. ceph admin sockets (asok) have very fine grained information of OSD state:
 ------------------------------------------------------------------------------------------------------------------
-	$ ceph --admin-daemon ceph-osd.0.asok config show |grep <param_of_interest>
-	ex: ceph --admin-daemon ceph-osd.0.asok config show |grep osd_max_backfills
+	$ ceph --admin-daemon /var/lib/ceph/osd/ceph-osd.0.asok config show |grep <param_of_interest>
+	ex: ceph --admin-daemon /var/lib/ceph/osd/ceph-osd.0.asok config show |grep osd_max_backfills
 
 
 Refer to this link for documentation on admin sockets:
