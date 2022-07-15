@@ -1,4 +1,8 @@
 ## script_name: xtract_PortBindingSRIOV.sh 
+## A simple bash script to get the neutron port information given the compute hostname. The flow of information extraction is below: 
+#   1. Extract the unique switchports that the compute uses on the switch side from nuage-switchport-mapping-list
+#   2. Extract the neutron port list from the unique switchport
+#   3. Extract the binding information from the neutron port-list
 
 source overcloudrc 
 sriov_compute=$1
