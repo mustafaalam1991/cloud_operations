@@ -1,5 +1,5 @@
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Ceph Administration:
+CEPH Administration:
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 There are many online resources that are related to Administring Ceph. To get you started you can visit:
 https://tracker.ceph.com/projects/ceph/wiki/10_Commands_Every_Ceph_Administrator_Should_Know
@@ -59,13 +59,10 @@ should be equal to the pg_num.
 
 Further Reading: https://docs.ceph.com/docs/mimic/rados/operations/placement-groups/
 
-	
 4. Find out pool details:
 ------------------------------------------------------------------------------------------------------------------	
 	- Following command is very useful to get a full picture of the pools available in ceph (inclusing the replication factor): 
 		- $sudo ceph osd pool ls detail
-
-
 
 5. Map osds to disk - How to identify a faulty osd disk?
 ------------------------------------------------------------------------------------------------------------------	
