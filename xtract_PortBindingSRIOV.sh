@@ -3,6 +3,7 @@
 #   1. Extract the unique switchports that the compute uses on the switch side from nuage-switchport-mapping-list
 #   2. Extract the neutron port list from the unique switchport
 #   3. Extract the binding information from the neutron port-list
+# This script will work on Openstack with Nuage Support Neutron drivers 
 
 source overcloudrc 
 sriov_compute=$1
